@@ -4,4 +4,3 @@ TumorDiagnoseAI is a Real-Time Multi class Brain Tumor Classifier which aims to 
 
 The developed web application employs state-of-the-art deep learning techniques for multiclass brain tumor classification, encompassing glioma, meningioma, pituitary, and benign tumor types. The dataset used in this study comprises 3264 MR images, with 2870 images allocated for training and 394 for testing. By harnessing the potential of CNNs, our project endeavors to achieve a satisfactory level of accuracy in distinguishing and categorizing these diverse brain tumor types based on MRI image sets.
 
-[click here](https://www.kaggle.com/datasets/sartajbhuvaji/brain-tumor-classification-mri) To view the dataset
