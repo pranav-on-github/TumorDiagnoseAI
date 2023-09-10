@@ -1,0 +1,62 @@
+{% extends "base.html" %} {% block content %}
+
+<!-- <h2>TumorDiagnoseAI</h2> -->
+
+<div class="totcontainer">
+  <div class="sub">
+    <form id="upload-file" method="post" enctype="multipart/form-data">
+      <h5 style="color: white;"><b>Upload MRI to Diagnose the Brain Tumor</b></h5>
+      <div style="padding-left: 125px;">
+        <label for="imageUpload" class="upload-label" style="margin-top: 25px;"> Upload </label>
+      </div>
+      <!-- <label for="imageUpload" class="upload-label" style="margin-top: 25px;"> Upload </label> -->
+      <input
+        type="file"
+        name="file"
+        id="imageUpload"
+        accept=".png, .jpg, .jpeg"
+      />
+    </form>
+
+    <div class="image-section" style="display: none; padding-left: 50px;">
+      <div class="img-preview">
+        <div id="imagePreview"></div>
+      </div>
+      <div style="padding-left: 75px;">
+        <button type="button" class="btn btn-primary btn-lg" id="btn-predict" style="background-color:#4e73df;">
+          Predict
+        </button>
+      </div>
+    </div>
+
+    <div class="loader" style="display: none"></div>
+
+    <h5 id="result">
+      <span id="ans"> </span>
+    </h5>
+  </div>
+  <div class="sub">
+    <div class="Probability" style="color: white;">
+      <div style="margin-bottom: 15px;">
+        <h5>
+          <b>Diagnosis Probability</b>
+        </h5>
+      </div>
+      <h6>Meningioma => <span id="meningioma"></span></h6>
+      <h6>Glioma     => <span id="glioma"></span></h6>
+      <h6>Pituitary  => <span id="pituitary"></span></h6>
+      <h6>No Tumor   => <span id="notumor"></span></h6>
+    </div>
+     <div class="suggest">
+      <p id="pooch">Want to know more about the tumor diagnosed ??</p>
+      <button class="btn-mine">
+        <a href="" id="linktoknow" target="_blank">Click here</a>
+      </button>
+    </div> 
+  </div>
+</div>
+
+<footer>
+  <h6>&#169; Developed by <b>Pranav R.P</b></h6>
+</footer>
+{% endblock %}
